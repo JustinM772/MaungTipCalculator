@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class Main {
         System.out.println("Total bill before tip: $" + totalCostBeforeTip);
         System.out.println("Total percentage: " + percentage + "%");
         double totalTip = (double) percentage / 100 * totalCostBeforeTip;
-        System.out.println("Total tip: $" + totalTip);
+        System.out.println("Total tip: $" + Math.round(totalTip * 100.0) / 100.0); // I learned how to round from here: https://stackoverflow.com/questions/5710394/how-do-i-round-a-double-to-two-decimal-places-in-java
         double totalCostWithTip = totalCostBeforeTip + totalTip;
         System.out.println("Total bill with tip: $" + totalCostWithTip);
         double costPerPersonBeforeTip = totalCostBeforeTip / people;
