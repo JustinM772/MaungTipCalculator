@@ -22,8 +22,17 @@ public class Main {
         totalCostBeforeTip /= 100;
         totalCostBeforeTip += 1;
         System.out.println("----------------------------------");
-        System.out.println("Total bill before tip: " + totalCostBeforeTip);
+        System.out.println("Total bill before tip: $" + totalCostBeforeTip);
         System.out.println("Total percentage: " + percentage + "%");
-
+        double totalTip = (double) percentage / 100 * totalCostBeforeTip;
+        System.out.println("Total tip: $" + totalTip);
+        double totalCostWithTip = totalCostBeforeTip + totalTip;
+        System.out.println("Total bill with tip: $" + totalCostWithTip);
+        double costPerPersonBeforeTip = totalCostBeforeTip / people;
+        System.out.println("Per person cost before tip: $" + costPerPersonBeforeTip);
+        double tipPerPerson = totalTip / people;
+        System.out.println("Tip per person: $" + tipPerPerson);
+        double totalCostPerPerson = costPerPersonBeforeTip + tipPerPerson;
+        System.out.println("Total cost per person: $" + totalCostPerPerson);
     }
 }
