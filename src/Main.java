@@ -28,12 +28,12 @@ public class Main {
         double totalTip = (double) percentage / 100 * totalCostBeforeTip;
         System.out.println("Total tip: $" + Math.round(totalTip * 100.0) / 100.0); // I learned how to round from here: https://stackoverflow.com/questions/5710394/how-do-i-round-a-double-to-two-decimal-places-in-java
         double totalCostWithTip = totalCostBeforeTip + totalTip;
-        System.out.println("Total bill with tip: $" + totalCostWithTip);
+        System.out.println("Total bill with tip: $" + Math.round(totalCostWithTip * 100.0) / 100.0);
         double costPerPersonBeforeTip = totalCostBeforeTip / people;
-        System.out.println("Per person cost before tip: $" + costPerPersonBeforeTip);
+        System.out.println("Per person cost before tip: $" + Math.round(costPerPersonBeforeTip * 100.0) / 100.0);
         double tipPerPerson = totalTip / people;
-        System.out.println("Tip per person: $" + tipPerPerson);
+        System.out.println("Tip per person: $" + Math.round(tipPerPerson * 100.0) / 100.0);
         double totalCostPerPerson = costPerPersonBeforeTip + tipPerPerson;
-        System.out.println("Total cost per person: $" + totalCostPerPerson);
+        System.out.println("Total cost per person: $" + Math.round(totalCostPerPerson * 100.0) / 100.0);
     }
 }
